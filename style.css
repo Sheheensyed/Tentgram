@@ -1,5 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poiret One", sans-serif;
+}
+
 :root {
-  --primary-color: #1bacc3;
   --primary-color-dark: #34b72d;
   --secondary-color: #e0efff;
   --text-dark: #093855;
@@ -9,43 +17,7 @@
   --max-width: 1200px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.section-container {
-  padding: 5rem 1rem;
-  max-width: var(--max-width);
-  margin: auto;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-.section-subtitle {
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--primary-color);
-  margin-bottom: 5rem;
-  text-align: center;
-}
-
-img {
-  width: 100%;
-}
-
-body {
-    font-family: "Poppins", sans-serif;
-}
-
-nav {
+nav{
   position: absolute;
   top: 0;
   left: 50%;
@@ -58,12 +30,16 @@ nav {
   justify-content: space-between;
 }
 
-.nav-logo a {
+.nav-logo a{
   text-decoration: none;
   color: var(--extra-light);
   font-size: 1.5rem;
+  font-weight: 600;
 }
-
+.nav-logo a:hover{
+  color: black;
+  transition: ease-in-out 0.5s;
+}
 .nav-links {
   display: none;
   list-style: none;
@@ -72,23 +48,26 @@ nav {
 }
 
 .link {
-  color: var(--extra-light);
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
   text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.link:hover {
-  color: var(--primary-color);
+.link:hover{
+  transition: ease-in-out 0.5s;
+  color: black;
 }
 
 header{
   height: 100vh;
-  background-image: linear-gradient(
-      rgba(45, 92, 132, 0.5),
+  background-image: linear-gradient(to bottom right,
+      rgba(255, 0, 0, 0.605),
       rgba(45, 92, 132, 0.5)
     ),
-    url("assets/bg-1.jpg");
+    url("https://www.travelturtle.world/wp-content/uploads/2024/03/6585d85934a171a9a052c170_traveling-based-on-fare-deals.jpeg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -106,37 +85,66 @@ header .section-container {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  color: var(--extra-light);
+  color: white;
 }
 
-.header-content h1 {
+.header-content h1{
+
   font-size: 5rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 5rem;
 }
 
 .header-content p {
   text-align: center;
+  font-weight: 500;
+  line-height: 25px;
 }
 
 .header-content button {
   padding: 1rem 2rem;
-  outline: none;
   border: none;
-  border-radius: 5px;
-  background-color: var(--primary-color);
-  color: var(--extra-light);
+  border-radius: 50px;
+  background-color: rgba(173, 127, 127, 0.592);
+  color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
-.header-content button:hover {
+.header-content button:hover{
   background-color: var(--primary-color-dark);
 }
 
+
+.section-container{
+  padding: 5rem 1rem;
+  max-width: var(--max-width);
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: rgb(42, 144, 204);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: rgb(179, 144, 144);
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  border-radius: 50px;
+}
 .journey-container {
-  background-color: var(--secondary-color);
+  background-color: rgba(255, 199, 199, 0.411);
 }
 
 .journey-grid {
@@ -144,28 +152,26 @@ header .section-container {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
-
-.country-card {
-  background-color: var(--extra-light);
+.place-card {
+  background-color: rgba(245, 222, 179, 0);
+  font-weight: 800;
+  text-align: center;
+  border-radius: 50px;
 }
 
-.country_name {
-  padding: 1rem;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-light);
-  cursor: pointer;
+.place-card:hover{
+  background-color:  rgba(255, 199, 199, 0.727);
+  transition: ease-in-out 0.5s;
 }
-
-.country-name i {
+.place-name i {
   font-size: 1.2rem;
 }
 
-.country-name span {
+.place-name span {
   font-style: italic;
 }
+
+
 
 .banner-container {
   background-image: linear-gradient(
@@ -184,7 +190,8 @@ header .section-container {
   justify-content: center;
 }
 
-.banner-content {
+.disc-content {
+  font-weight: 800;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -193,23 +200,38 @@ header .section-container {
   color: var(--extra-light);
 }
 
-.banner-content h2 {
+.disc-content h2 {
+  margin-left: -20%;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 800;
 }
 
-.banner-content button {
+.disc-content button {
+  margin-left: -20%;
   padding: 0.5rem 2rem;
-  outline: none;
-  border: 2px solid var(--secondary-color);
+  border: 1px solid;
+  border-radius: 50px;
   background-color: transparent;
-  color: var(--secondary-color);
+  color:white;
   font-size: 1rem;
   cursor: pointer;
 }
+.disc-content button a{
+  text-decoration: none;
+  color: white;
+}
+.disc-content button:hover {
+  background-color: var(--primary-color-dark);
+  transition: ease-in-out 0.3s;
+}
+
+
+
+
 
 .display-container {
-  background-color: var(--secondary-color);
+  background-color:rgba(120, 205, 206, 0.699);
+  font-weight: 800;
 }
 
 .display-container :is(.section-title, .section-subtitle) {
@@ -217,6 +239,7 @@ header .section-container {
 }
 
 .display-grid {
+  
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -228,23 +251,28 @@ header .section-container {
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: var(--extra-light);
+  background-color: transparent;
   text-align: center;
 }
 
-.display-card i {
+.display-card i{
+  
   font-size: 2rem;
   color: var(--primary-color);
 }
 
 .display-card h4 {
+  font-weight: 800;
   font-size: 1rem;
   font-weight: 500;
   padding: 0 1rem;
   color: var(--text-dark);
 }
+.display-card h4{
+  font-weight: 800;
+}
 
-.display-card p {
+.display-card p{
   font-size: 0.8rem;
   padding: 0 1rem;
   color: var(--text-dark);
@@ -278,13 +306,19 @@ footer h4 {
 }
 
 .social-icons i {
+  color: rgba(255, 255, 255, 0.448);
   padding: 5px;
-  font-size: 1.2rem;
+  font-size: 2rem;
   cursor: pointer;
+}
+.social-icons i:hover{
+  color: white;
+  transition: ease-in-out 0.5s;
 }
 
 footer p {
   font-style: italic;
+  font-size: 20px;
 }
 
 @media (min-width: 640px) {
