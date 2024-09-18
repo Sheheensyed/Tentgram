@@ -335,6 +335,9 @@ footer p {
     align-items: flex-start;
   }
 
+  .marquee{
+    text-align: center;
+  }
   .header-content p {
     text-align: left;
   }
